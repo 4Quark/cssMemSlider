@@ -17,7 +17,7 @@ body {
 }
 
 .main {
-    width: 80%;
+    width: 70%;
     position: relative;
     margin: 5vh auto;
     overflow: hidden;
@@ -46,7 +46,8 @@ img {
     color:aliceblue;
     font-family: Arial;
     font-size: 4vh;
-    margin-left: 10%;
+    margin-left: 15%;
+    margin-top: -5vh;
 }
 
 input {
@@ -58,7 +59,8 @@ input {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-right: 10%;
+    margin-right: 15%;
+    z-index: 1;
 }
 
 label {
@@ -67,7 +69,7 @@ label {
     border: .5vh solid rgb(113, 145, 192);
     background-color: rgb(113, 145, 192);
     border-radius: 50%;
-    margin: 2%;
+    margin: 1%;
     cursor: pointer;
     transition: .3s;
 }
@@ -121,5 +123,9 @@ label:hover {
     .slider_buttons {
         justify-content: center;
         margin: 5%;
+    }
+    .capture {
+
+        margin-top: 0vh;
     }
 }
