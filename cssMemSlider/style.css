@@ -1,0 +1,131 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(2, 14, 26);
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main {
+    width: 70%;
+    position: relative;
+    margin: 5vh auto;
+    overflow: hidden;
+    border-radius: 3%;
+}
+
+.slides {
+    width: 500%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+img {
+    width: 20%;
+    object-fit: cover;
+    transition: 1s ease-in-out;
+}
+
+.capture_and_buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.capture {
+    color:aliceblue;
+    font-family: Arial;
+    font-size: 4vh;
+    margin-left: 15%;
+    margin-top: -5vh;
+}
+
+input {
+    display: none;
+}
+
+.slider_buttons {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 15%;
+    z-index: 1;
+}
+
+label {
+    height: 2vh;
+    width: 2vh;
+    border: .5vh solid rgb(113, 145, 192);
+    background-color: rgb(113, 145, 192);
+    border-radius: 50%;
+    margin: 1%;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.mem_caption {
+    display: none; 
+}
+
+label:hover {
+    background: whitesmoke;
+    border: .5vh solid whitesmoke;
+}
+
+#point-1:checked ~ .main .slides > img:nth-child(1) {
+    margin-left: -20%;
+}
+
+#point-2:checked ~ .main .slides > img:nth-child(2) {
+    margin-left: -40%;
+}
+
+#point-3:checked ~ .main .slides > img:nth-child(3) {
+    margin-left: -60%;
+}
+
+#point-4:checked ~ .main .slides > img:nth-child(4) {
+    margin-left: -80%;
+}
+
+#point-4:checked ~ .main .slides > img:nth-child(5) {
+    margin-left: 0%;
+}
+
+#point-1:checked ~ .slider_buttons label:nth-of-type(1),
+#point-2:checked ~ .slider_buttons label:nth-of-type(2),
+#point-3:checked ~ .slider_buttons label:nth-of-type(3),
+#point-4:checked ~ .slider_buttons label:nth-of-type(4),
+#point-5:checked ~ .slider_buttons label:nth-of-type(5) {
+	background: rgb(2, 14, 26);
+}
+
+#point-1:checked ~ .capture .caption1,
+#point-2:checked ~ .capture .caption2,
+#point-3:checked ~ .capture .caption3,
+#point-4:checked ~ .capture .caption4,
+#point-5:checked ~ .capture .caption5 {
+    display: flex; 
+}
+
+@media (max-width: 767px) {
+    .slider_buttons {
+        justify-content: center;
+        margin: 5%;
+    }
+    .capture {
+
+        margin-top: 0vh;
+    }
+}
